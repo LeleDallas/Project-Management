@@ -1,0 +1,498 @@
+\documentclass[oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\newcommand{\emailaddr}[1]{\href{mailto:#1}{\texttt{#1}}}
+\title{\LARGE Project Management Project: \\“Tracker”}
+\pagestyle{plain}
+
+
+\author{
+   Emanuele Dall'Ara\\ \emailaddr{emanuele.dallara@studio.unibo.it} 
+}
+
+\date{Agosto 2023}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+\chapter{Dominio applicativo}
+
+Tracker è un innovativo \textbf{marketplace} di vendita di energia che offre una piattaforma \textbf{web-based} per la gestione, il tracciamento e la vendita delle risorse energetiche. Questo marketplace è progettato per soddisfare le esigenze sia dei \textit{venditori} che degli \textit{utenti consumatori}, offrendo un ambiente integrato per la gestione efficace dell'energia.
+
+Come marketplace di vendita di energia, Tracker mette in contatto \textit{venditori} e \textit{consumatori}, consentendo loro di negoziare e scambiare energia in modo semplice e conveniente. I \textit{venditori}, come produttori di energia rinnovabile o fornitori di servizi energetici, possono utilizzare Tracker per mettere in mostra i loro prodotti e servizi, raggiungendo una vasta base di utenti interessati. Gli \textit{utenti consumatori}, come proprietari di edifici, possono accedere al marketplace per esplorare le diverse offerte energetiche disponibili e scegliere la soluzione più adatta alle loro esigenze.
+
+Oltre alla funzionalità di marketplace, Tracker fornisce anche un software \textbf{web-based} completo per la gestione delle risorse energetiche. Gli \textit{utenti consumatori} possono monitorare i consumi energetici dei loro edifici, visualizzando i dati in tempo reale e analizzando le tendenze nel corso del tempo. Possono anche tenere traccia della produzione di energia rinnovabile, come l'energia solare generata da pannelli fotovoltaici o l'energia eolica prodotta da turbine. Queste informazioni consentono agli utenti di valutare l'impatto ambientale e i risparmi ottenuti dalla produzione di energia rinnovabile.
+
+I \textit{venditori}, d'altra parte, hanno accesso a strumenti avanzati per la gestione dei clienti e delle tariffe energetiche. Possono personalizzare le tariffe in base alle esigenze dei clienti e monitorare il consumo energetico in tempo reale. Inoltre, Tracker consente ai venditori di inserire nuovi prodotti rinnovabili sul mercato, espandendo la loro gamma di offerte e promuovendo soluzioni energetiche sostenibili.
+
+Complessivamente, Tracker si distingue come un \textbf{marketplace} di vendita di energia innovativo che offre una piattaforma \textbf{web-based} completa per la gestione, il tracciamento e la vendita delle risorse energetiche. Sia i \textit{venditori} che gli \textit{utenti consumatori} possono trarre vantaggio da questa soluzione, creando un ecosistema dinamico e interconnesso per la gestione efficace dell'energia.
+
+
+\chapter{Scoping}
+\section{Fase preliminare}
+
+Prima di implementare il progetto Tracker, è fondamentale condurre una fase preliminare per comprendere appieno gli obiettivi e i requisiti del sistema. Questa fase coinvolge diverse attività, tra cui la pianificazione iniziale, l'identificazione degli stakeholder e la definizione dei criteri di successo.
+
+\section{Scoping Meeting}
+
+Lo Scoping Meeting è un incontro chiave che coinvolge gli stakeholder principali, tra cui rappresentanti dei venditori, degli utenti consumatori e del team di sviluppo di Tracker. Durante questo incontro, vengono discussi gli obiettivi del progetto, le aspettative, i vincoli e le sfide. \newline L'obiettivo principale è quello di allineare le aspettative di tutti i partecipanti e definire degli obiettivi specifici per il progetto.
+
+Durante questo processo, vengono organizzati diversi meeting per coinvolgere gli stakeholder e definire in dettaglio i requisiti e le condizioni di soddisfazione. 
+\newline \newline Di seguito sono riportate le diverse iterazioni effettuate durante i meeting che si svolgono in questa fase:
+
+\begin{itemize}
+\item \textbf{Primo meeting:} Durante il primo incontro, il fondatore del progetto illustra e presenta ai partecipanti il potenziale innovativo dell'idea che sta alla base del progetto. Viene fornita una spiegazione supportata dai dati e dalle analisi condotte durante le ricerche di mercato preliminari allo scoping meeting. \newline Dopo aver fornito una descrizione del contesto, si passa a una definizione più chiara e precisa, sebbene non ancora formalizzata, dei requisiti e delle caratteristiche del prodotto, comprese quelle dal punto di vista tecnologico. \newline Ciò permette al team di sviluppo di studiare la situazione e fare una prima proposta per una strategia di realizzazione del servizio. Durante questo incontro, viene anche condotta un'analisi \textbf{SWOT} e viene effettuata una valutazione delle opportunità di mercato e degli aspetti che possono risultare interessanti per la definizione di una soluzione leader del settore.
+
+\textit{Partecipanti}: Fondatore del progetto - Team di sviluppo - Potenziali stakeholder
+
+\item \textbf{Secondo meeting:} Il secondo incontro prevede la presentazione da parte del team di sviluppo della strategia e degli strumenti necessari alla sua realizzazione. \newline In questa fase, si procede alla formalizzazione delle \textbf{"Conditions of Satisfaction" (CoS)}, alla definizione del \textbf{Business Model Canvas} e all'arricchimento della bozza dei requisiti. \newline Durante il meeting, viene anche programmata la terza sessione, che si focalizzerà sulla terminazione della raccolta dei requisiti e sulla stesura della "Requirement Breakdown Structure" (RBS).
+
+\textit{Partecipanti}: Fondatore del progetto - Team di sviluppo - Stakeholder chiave
+
+\item \textbf{Terzo meeting:} La terza iterazione è interamente dedicata alla stesura formale dei requisiti del prodotto. Si procede alla stesura formale dei requisiti dell'applicazione, completando la definizione della \textbf{RBS}. \newline Si definisce anche il piano di sviluppo dell'applicazione, che tiene conto delle risorse disponibili e delle tempistiche previste per il lancio sul mercato.
+
+\textit{Partecipanti}: Fondatore del progetto - Team di sviluppo - Responsabile della raccolta dei requisiti - Potenziali stakeholder
+
+\item \textbf{Quarto meeting:} Si procede alla definizione del \textbf{"Proof of Concept" (PoC)} basandosi anche sull'analisi SWOT condotta precedentemente. \newline Questo documento consentirà di accedere ai programmi di finanziamento che vincoleranno lo sviluppo dell'iniziativa imprenditoriale. \newline L'approvazione del PoC da parte degli stakeholder porta il progetto alla fase di pianificazione. In questa fase, viene definito il budget necessario per il lancio dell'applicazione e si stabiliscono le modalità di marketing e promozione del prodotto.
+
+\textit{Partecipanti}: Fondatore del progetto - Responsabile del PoC - Finanziatori
+
+\end{itemize}
+
+Il coinvolgimento attivo degli stakeholder durante la fase di scoping è fondamentale per garantire che le esigenze di tutte le parti interessate siano prese in considerazione e che il progetto Tracker sia avviato nella direzione giusta.
+
+\clearpage
+\section{Conditions of Satisfaction}
+
+Le Conditions of Satisfaction (CoS) rappresentano le condizioni o gli obiettivi specifici che devono essere soddisfatti per garantire la piena soddisfazione del cliente o degli stakeholder. Essi sono formulati in modo chiaro e misurabile, consentendo di valutare se un determinato requisito o una funzionalità è stata implementata con successo.
+\newline \newline Nel contesto di TrackER, i Conditions of Satisfaction includono:
+
+\begin{itemize}
+\item Realizzazione di un MVP testabile in pochi mesi e debutto sul mercato italiano in 7-8 mesi, con focus su città di medie dimensioni (\textit{200mila} abitanti massimo).
+
+\item Garantire una UX personalizzata per ogni tipo di attività ed account (Venditore/Consumatore).
+
+\item Rispetto del budget stabilito per il progetto.
+
+\item Produzione di energia pulita pari a circa 20 GWh per città entro i primi cinque anni sul mercato nazionale.
+
+\end{itemize}
+
+\section{Requirement Breakdown Structure}
+All'interno della Requirement Breakdown Structure vengono inseriti i requisiti ad alto livello del sistema, mentre la Work Breakdown Structure è utilizzata per arricchire tali requisiti con ulteriori funzionalità di dettaglio. \newline L'approccio utilizzato per la raccolta dei requisiti è basato su Facilitated Group Session, una metodologia collaborativa che coinvolge il team di lavoro e altre parti interessate nella definizione e discussione dei requisiti del progetto. \newline Questo approccio strutturato facilita una comprensione condivisa degli obiettivi del sistema e favorisce la partecipazione attiva di tutti i membri del gruppo nella definizione delle specifiche del progetto.
+\newline La RBS definita è visualizzabile nell’immagine allegata RBS.png.
+
+\section{Facilitated Group Session}
+
+La Facilitated Group Session è una sessione di lavoro collaborativo che coinvolge gli stakeholder chiave per ottenere input, idee e feedback sul progetto. Durante questa sessione, vengono affrontati i requisiti, le funzionalità e le priorità, consentendo una partecipazione attiva degli stakeholder nel processo decisionale.
+
+Il direttore del marketing e il manager contribuiscono in modo significativo alla fase iniziale del progetto fornendo informazioni e prospettive fondamentali per rendere l'applicazione più rilevante, utile e di successo. Ecco in dettaglio come ciascuno di loro può contribuire:
+
+\subsection{Manager}
+Il manager esperto del settore ci aiuta a:
+\begin{itemize}
+    \item Fornire conoscenze specifiche del settore: Grazie alla sua esperienza nel campo delle energie rinnovabili, il manager può condividere conoscenze preziose sulle dinamiche interne del mercato energetico, le esigenze dei clienti e le tendenze attuali nel settore.
+    \item Identificare i migliori casi d'uso: Utilizzando la sua esperienza, il manager può individuare i modi più efficaci in cui l'applicativo può supportare le operazioni quotidiane relative alla gestione dei consumi e delle energie rinnovabili.
+    \item Testare l'applicativo durante lo sviluppo: Il manager può essere coinvolto nel testing e fornire feedback funzionali, permettendo un miglioramento continuo del progetto prima del suo lancio.
+    \item Valutare i requisiti tecnici: In collaborazione con il team di sviluppo, il manager può identificare le funzionalità e le integrazioni tecniche necessarie per garantire che l'app soddisfi le esigenze specifiche del mercato energetico.
+    \item Ottimizzare tempi e costi: Grazie alla sua conoscenza del settore, il manager può contribuire a ottimizzare il processo di sviluppo, riducendo i tempi e i costi necessari per portare l'applicazione sul mercato.
+\end{itemize}
+
+\subsection{Direttore del Marketing}
+
+Il direttore del marketing ci aiuta a:
+
+\begin{itemize}
+    \item Definire una strategia di marketing complessiva: Il direttore del marketing può stabilire gli obiettivi di marketing dell'applicativo, identificare il pubblico target e sviluppare un piano di marketing per promuovere il marketplace.
+    \item Creare un brand e un'identità forte: Il direttore del marketing può sviluppare un'identità visiva e verbale coerente per l'applicativo, inclusi il logo, i colori e il tono di voce, in modo da creare un'esperienza di marca unica per gli utenti.
+    \item Sviluppare un piano di pubbliche relazioni: Attraverso contatti con i media e influencer rilevanti, il direttore del marketing può generare interesse e hype intorno all'app prima e dopo il lancio, aumentando la visibilità del marketplace di energia rinnovabile.
+    \item Gestire le campagne pubblicitarie: Utilizzando diverse forme di pubblicità online e offline, il direttore del marketing può attirare l'attenzione del pubblico target e promuovere l'utilizzo dell'applicazione.
+    \item Pianificare le promozioni di lancio: Creando offerte speciali e promozioni al momento del lancio, il direttore del marketing può stimolare la partecipazione degli utenti e incentivare l'adozione dell'applicazione.
+    \item Analizzare i dati e ottimizzare le performance: Utilizzando dati e metriche di marketing, il direttore del marketing può misurare l'efficacia delle campagne e apportare miglioramenti per aumentare l'engagement degli utenti e il successo complessivo del progetto.
+    \item Formare e supportare il team di marketing: Il direttore del marketing può aiutare nella selezione e formazione di personale interno per gestire in modo efficace la strategia di marketing dell'applicazione e garantirne la crescita sostenibile nel tempo.
+\end{itemize}
+
+La collaborazione di questi due esperti assicura che il marketplace di energia rinnovabile sviluppato come web app sia efficacemente progettato, promosso e gestito, soddisfacendo le esigenze degli utenti e creando un'esperienza di alta qualità per tutti gli stakeholder coinvolti.
+
+\section{SWOT Analysis}
+L'analisi SWOT di TrackER fornisce una panoramica delle sue principali forze, debolezze, opportunità e minacce nel contesto del mercato della vendita di energia. Si basa su una valutazione generale e potrebbe essere necessario condurre un'analisi più dettagliata e specifica per comprendere appieno la posizione competitiva di TrackER.
+
+\begin{itemize}
+    \item Punti di forza:
+        \begin{itemize}
+            \item Concetto innovativo: TrackER offre un marketplace unico e innovativo per la vendita di energia, fornendo una piattaforma completa per la gestione e il monitoraggio delle risorse energetiche.
+            \item Ampia base di utenti: TrackER può vantare una vasta base di venditori e utenti consumatori interessati alla compravendita di energia, creando un ecosistema dinamico e interconnesso.
+            \item Gestione efficace dell'energia: TrackER fornisce strumenti avanzati per la gestione dei consumi energetici e l'analisi delle tendenze nel tempo, consentendo agli utenti di valutare l'impatto ambientale e i risparmi ottenuti dalla produzione di energia rinnovabile.
+            \item Incentivi nazionali: Grazie alla transizione energetica, i governi o le regioni possono fornire sussidi e agevolazioni finanziarie alle aziende e ai cittadini che investono in tecnologie a basse emissioni di carbonio o fonti di energia rinnovabile, come pannelli solari, eolico, biomassa o energia geotermica.
+        \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Punti di debolezza:
+        \begin{itemize}
+            \item Dipendenza dalla partecipazione degli utenti: Il successo di TrackER dipende dalla partecipazione attiva dei venditori e degli utenti consumatori, quindi potrebbe richiedere sforzi per incentivare l'adesione e garantire un numero sufficiente di offerte energetiche.
+            \item Competizione nel mercato energetico: Il settore dell'energia è competitivo e affronta sfide continue. TrackER deve distinguersi e offrire un valore unico per competere con altre piattaforme e soluzioni energetiche.
+            \item Scalabilità del sistema: Con l'aumento del numero di utenti e transazioni, TrackER deve garantire che la piattaforma sia in grado di gestire il carico di lavoro senza compromettere le prestazioni.
+        \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Opportunità:
+        \begin{itemize}
+            \item Transizione verso energie rinnovabili: C'è una crescente consapevolezza sull'importanza delle energie rinnovabili e delle soluzioni energetiche sostenibili. TrackER può sfruttare questa opportunità offrendo una vasta gamma di prodotti e servizi energetici provenienti da fonti rinnovabili.
+            \item Espansione a livello internazionale: TrackER ha l'opportunità di espandersi in nuovi mercati internazionali, dove la domanda di soluzioni energetiche innovative è in aumento.
+            \item Partnership strategiche: TrackER può stabilire partnership con produttori di energia rinnovabile, fornitori di servizi energetici e altre entità del settore per ampliare la propria offerta e raggiungere nuovi mercati.
+        \end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+    \item Minacce:
+        \begin{itemize}
+            \item Instabilità normativa: Le normative e le politiche governative nel settore energetico possono essere soggette a cambiamenti, creando incertezza e sfide per TrackER nell'adattarsi alle nuove regole.
+            \item Minaccia di nuovi concorrenti: Nuove startup o grandi aziende possono entrare nel mercato con soluzioni competitive, aumentando la pressione concorrenziale su TrackER.
+            \item Variazioni dei prezzi delle fonti energetiche: Le fluttuazioni dei prezzi delle fonti energetiche possono influenzare la redditività e l'attrattiva delle offerte di TrackER.
+        \end{itemize}
+\end{itemize}
+
+\section{Business Model Canvas}
+Il Business Model Canvas è un framework strategico utilizzato per descrivere, visualizzare e analizzare il modello di business di un'organizzazione. Esso fornisce una panoramica completa dei principali elementi che compongono il modello di business e consente di comprendere come l'organizzazione crea, fornisce e cattura valore.
+
+Di seguito è definito il Business Model Canvas utilizzato per il porgetto:
+
+\begin{itemize}
+    \item Customer Segments: TrackER si rivolge ai produttori di energia rinnovabile, come fornitori di energia solare ed eolica, e agli utenti consumatori, come proprietari di edifici o attività commerciali alla ricerca di soluzioni energetiche.
+    \item Value Proposition: TrackER offre un marketplace per la vendita di energia, consentendo agli utenti di commerciare e scambiare energia attraverso una piattaforma web-based. Inoltre, fornisce strumenti avanzati per la gestione delle risorse energetiche, inclusi il monitoraggio dei consumi, la valutazione dell'impatto ambientale e la gestione delle tariffe.
+    \item Channels: Accesso alla piattaforma TrackER tramite un sito web dedicato o applicazione mobile sia per i produttori e gli utenti consumatori, sessioni di webinar, social media, partnership, campagne di marketing e canali di supporto.
+    \item Customer Relationships: TrackER fornisce supporto clienti e assistenza tecnica tramite canali di comunicazione dedicati per garantire un'esperienza soddisfacente agli utenti.
+    \item Revenue Streams: Le entrate di TrackER derivano da commissioni sulle transazioni effettuate sulla piattaforma e da sottoscrizioni a servizi di gestione energetica aggiuntivi.
+    \item Key Resources: Le risorse chiave di TrackER includono una piattaforma tecnologica avanzata per la gestione e la vendita di energia, nonché partnership strategiche con produttori di energia rinnovabile e fornitori di servizi energetici.
+    \item Key Activities: Le attività principali di TrackER comprendono lo sviluppo e la manutenzione della piattaforma, nonché le attività di marketing e promozione per attrarre produttori di energia e utenti consumatori.
+    \item Key Partner:  I partner chiave di TrackER sono i produttori di energia rinnovabile con cui collabora per includere le loro offerte nel marketplace, e i fornitori di servizi energetici che offrono servizi complementari.
+    \item Cost Structure: TrackER affronta costi legati allo sviluppo tecnologico della piattaforma, all'assunzione di personale per la gestione e l'assistenza clienti, nonché al budget per le attività di marketing e promozione.
+\end{itemize}
+
+\section{MVP}
+Si prevede di sviluppare un MVP (Minimum Viable Product) per TrackER al fine di testare immediatamente il servizio con una parte della potenziale clientela, ottenendo feedback tempestivi. L'MVP sarà completato entro due mesi dall'avvio del progetto e sarà lanciato in alcuni centri abitati selezionati. Basandoci sul Revenue Flow definito nel Business Model Canvas, si ritiene che l'MVP debba includere le seguenti caratteristiche, che rappresentano solo una parte minima delle funzionalità previste per il prodotto finale:
+
+\begin{itemize}
+    \item \textbf{Registrazione degli utenti:} Permettere agli utenti di creare un account e accedere alla piattaforma TrackER.
+    \item \textbf{Profilo utente:} Consentire agli utenti di creare e gestire il proprio profilo, fornendo informazioni personali e preferenze.
+    \item \textbf{Monitoraggio dei consumi energetici:} Offrire una funzionalità per monitorare i consumi energetici in tempo reale, fornendo dati dettagliati sull'energia utilizzata.
+    \item \textbf{Gestione dei dispositivi:} Consentire agli utenti di aggiungere e gestire i propri dispositivi energetici, come pannelli solari, turbine eoliche o sistemi di accumulo energetico.
+    \item \textbf{Pianificazione e ottimizzazione energetica:} Fornire strumenti per pianificare e ottimizzare l'uso dell'energia, suggerendo strategie per ridurre i consumi e massimizzare l'efficienza energetica.
+    \item \textbf{Commercio di energia:} Implementare una funzionalità di marketplace che consenta agli utenti di comprare e vendere energia tra di loro, creando un sistema di scambio energetico.
+    \item \textbf{Notifiche e avvisi:} Invio di notifiche agli utenti riguardo ai consumi energetici, ai cambiamenti di prezzi dell'energia e ad altre informazioni rilevanti.
+    \item \textbf{Supporto clienti:} Fornire un canale di supporto clienti per rispondere alle domande degli utenti e fornire assistenza tecnica.
+\end{itemize}
+
+L'MVP di TrackER sarà sviluppato con un focus specifico sulle funzionalità essenziali che permettano di testare e validare l'idea di business e raccogliere feedback dagli utenti.
+
+
+
+\section{RBS \& POS}
+
+La combinazione di Requirement Breakdown Structure (RBS) e Conditions of Satisfaction (Condizioni di Soddisfazione) fornisce una panoramica completa dei requisiti del progetto Tracker. La RBS scompone i requisiti in categorie e sottocategorie, mentre le POS definiscono i criteri di successo. Questa combinazione aiuta a garantire la copertura completa dei requisiti e la valutazione oggettiva del successo del progetto.
+In allegato sono consultabili questi documenti.
+
+\section{Project Management Lifecycle}
+Il ciclo di vita del progetto per TrackER segue un approccio iterativo, che è stato scelto per adattarsi alla natura mutevole dello scope del progetto. Data la natura del mercato energetico in continua evoluzione, è necessario offrire una piattaforma dinamica e in costante aggiornamento.
+
+Nella fase di iniziazione, vengono definiti gli obiettivi specifici di TrackER e si analizzano le esigenze dei clienti nel settore dell'energia. Durante questa fase, si stabiliscono i vincoli, il budget e le risorse disponibili per lo sviluppo del progetto.
+
+Successivamente, nella fase di pianificazione, viene creato un piano di progetto dettagliato. Si tiene conto della natura mutabile dello scope del progetto e si definiscono le attività principali, i milestone e le tempistiche per ogni iterazione del progetto. Inoltre, si definisce una strategia di Continuous Delivery per garantire rilasci frequenti e affidabili.
+
+L'iterazione 1 rappresenta il primo ciclo di sviluppo del progetto. Durante questa fase, vengono sviluppate le funzionalità chiave di TrackER, come la registrazione degli utenti, la creazione del profilo utente e il monitoraggio dei consumi energetici. Durante l'iterazione, si raccoglie il feedback dai clienti e dagli utenti per valutare l'efficacia delle funzionalità implementate.
+
+Dopo l'iterazione 1, viene effettuata una fase di valutazione e raffinamento. Il feedback raccolto viene analizzato per identificare eventuali miglioramenti da apportare alle funzionalità esistenti o per introdurre nuove funzionalità. Questo processo di valutazione e raffinamento viene ripetuto ad ogni iterazione successiva del progetto.
+
+L'approccio iterativo del ciclo di vita del progetto per TrackER consente di adattarsi alle esigenze in evoluzione del mercato energetico, assicurando una piattaforma sempre aggiornata e in grado di soddisfare le richieste dei clienti. La strategia di Continuous Delivery garantisce una completa affidabilità di ogni rilascio, massimizzando la customer satisfaction e riducendo il Time To Market.
+
+\chapter{Planning}
+
+\section{Joint Project Planning Session}
+La Joint Project Planning Session (JPPS) è un'importante fase di pianificazione del progetto Tracker. Durante questa sessione, i partecipanti collaborano per definire i dettagli del progetto e stabilire gli obiettivi, le attività e le risorse necessarie per il suo successo. Di seguito sono riportati i partecipanti e l'agenda proposta per il JPPS di Tracker.
+
+I partecipanti a questa fase includono:
+
+\begin{enumerate}
+    \item Founder/Project Manager: il fondatore del progetto Tracker o il responsabile del progetto che guida l'intero processo di pianificazione.
+    \item Consulente facilitatore \& tecnografo: un consulente esperto che facilita l'incontro, fornendo supporto tecnico e guidando la discussione.
+    \item Development Core Team: il team di sviluppo principale di Tracker, composto da sviluppatori, progettisti e altri membri chiave responsabili dell'implementazione del progetto.
+    \item JPP consultant: un consulente esterno che supporta la sessione JPP, offrendo expertise e aiutando a facilitare l'incontro.
+\end{enumerate}
+
+L'agenda proposta per il JPPS di Tracker comprende i seguenti punti: Kick-off meeting e Working Session
+
+\subsection{Kick-off meeting}
+Il Kick-off meeting è la fase iniziale del JPPS e include i seguenti elementi:
+
+\begin{itemize}
+    \item Introduzione dello stakeholder: presentazione dello stakeholder che finanzia il progetto Tracker e spiegazione del suo ruolo e dell'importanza per il successo del progetto.
+    \item Presentazione dei partecipanti: introduzione di tutti i partecipanti alla sessione JPPS, inclusi i loro ruoli all'interno di Tracker e nel meeting stesso.
+\end{itemize}
+
+\subsection{Working Session}
+La Working Session è la parte centrale del JPPS e comprende i seguenti punti:
+
+\begin{itemize}
+    \item Validazione e prioritizzazione dei requisiti: utilizzando il metodo MoSCoW, i partecipanti discutono e validano i requisiti del progetto, tenendo conto delle deadline stabilite.
+    \item Approccio di pianificazione del progetto: panoramica sull'approccio necessario per pianificare il progetto Tracker in modo efficace.
+    \item Generazione e validazione della Work Breakdown Structure (WBS): a partire dalla RBS (Resource Breakdown Structure) prodotta durante la fase di scoping, i partecipanti definiscono e validano la struttura delle attività del progetto.
+    \item Stima delle durate e delle risorse: i partecipanti stimano la durata delle attività del progetto e le risorse necessarie per completarle.
+    \item Identificazione dei rischi e piani di mitigazione: discussione e identificazione dei potenziali rischi legati al progetto Tracker e definizione dei piani di mitigazione per affrontarli.
+    \item Creazione del diagramma delle dipendenze e del critical path: i partecipanti creano un diagramma delle dipendenze per visualizzare le relazioni tra le attività e identificare il percorso critico per il completamento del progetto.
+    \item Consenso sui contenuti del piano: alla fine della sessione, si cerca di ottenere il consenso di tutti i partecipanti sui contenuti del piano di progetto.
+\end{itemize}
+
+La JPPS è un'importante fase di pianificazione del progetto Tracker, durante la quale vengono definiti gli obiettivi, le attività, le risorse e i piani di mitigazione necessari per il successo del progetto. La collaborazione tra i partecipanti durante questa sessione è fondamentale per garantire una comprensione comune e una pianificazione accurata del progetto.
+
+
+
+
+
+
+
+\section{Project Definition Statement}
+Il Project Definition Statement è un documento che fornisce una descrizione chiara e concisa del progetto. Include informazioni come gli obiettivi del progetto, i risultati attesi, i vincoli, le risorse necessarie e le principali milestone. Questo documento serve come punto di riferimento per tutto il team e gli stakeholder, aiutando a mantenere una comprensione comune del progetto.
+
+\section{WBS (Work Breakdown Structure)}
+La WBS è una struttura gerarchica che suddivide il progetto in compiti più piccoli e gestibili. Questa suddivisione facilita la pianificazione, l'assegnazione delle responsabilità e il monitoraggio dei progressi del progetto. La WBS può essere rappresentato attraverso una struttura ad albero, in cui le attività sono organizzate in sotto-attività e sottosottattività.
+
+\section{Cashflow}
+Nel progetto Tracker, è stata dedicata molta attenzione alla stima dei costi. Tuttavia, data la natura complessa e dinamica del settore energetico, alcune stime potrebbero essere soggette a incertezze. \newline Pertanto, le seguenti stime dei costi sono da considerarsi come valori approssimativi e soggetti a revisione durante lo sviluppo del progetto.
+\subsection{Outflow}
+Il budget totale per il progetto è di 200.000 euro, distribuito come segue:
+\begin{itemize}
+    \item 110.000 euro sono stati destinati allo sviluppo e all'implementazione della piattaforma web-based, inclusi i costi di sviluppo del software e del personale, la progettazione dell'interfaccia utente e la gestione del database.
+
+    \item 35.000 euro sono stati previsti per l'acquisizione di hardware e infrastrutture necessarie per supportare il funzionamento del marketplace di vendita di energia.
+
+    \item 30.000 euro sono stati allocati per le attività di marketing e promozione, compresi i costi per la realizzazione di materiale pubblicitario, la partecipazione a fiere ed eventi del settore e la promozione online.
+
+    \item 2.000 euro sono stati destinati alla formazione del personale e all'assistenza tecnica durante la fase di lancio e avvio del progetto.
+
+    \item 23.000 euro sono stati riservati per le spese generali e le eventuali spese impreviste.
+\end{itemize}
+
+\subsection{Inflow}
+I movimenti di inflow si registrano a partire dal primo rilascio e sono inizialmente legati alle entrate percepite con la sottoscrizione di contratti con i vari utenti consumatori e nuovi fornitori di fonti energetiche.
+\newline Considerando una città di medie dimensioni composta mediamente 100mila abitanti e supponendo che entro i primi 2/3 anni dal rilascio, almeno il 10\% degli abitanti di una città sottoscrivesse un contratto standard di monitoraggio dal costo di 120€ annui, il ricavo totale sarebbe di all'incirca di \textbf{1,200,000€} annui per ogni città.
+Contemporaneamente si ha un'altro guadagno dato dall'installazione di fonti rinnovabili; questo guadagno è dato dal 2\% del ricavo dell'installazione dell'impianto. 
+\newline Considerando ora il costo medio di 5,000€/10,000€ per un impianto rinnovabile domestico e 20,000€/40,000€ per un impianto rinnovabile aziendale si ottengono all'incirca seguenti risultati per ogni installazione:
+\begin{itemize}
+    \item Impianto domestico : \textbf{100€}
+    \item Impianto aziendale : \textbf{400€}
+\end{itemize}
+
+\section{Valutazione dei rischi}
+Nel contesto di Tracker, i rischi possono essere di diversa natura, tra cui rischi tecnologici, rischi operativi, rischi finanziari e rischi legati all'ambiente energetico. È importante condurre una valutazione dei rischi approfondita e sistematica per identificare i potenziali scenari negativi e sviluppare strategie di mitigazione per gestire tali rischi.
+
+\section{Exit Strategy}
+L'Exit Strategy è una pianificazione per l'uscita dal progetto una volta completato con successo o in caso di necessità di interromperlo. Questa strategia definisce le azioni e le procedure da seguire per chiudere il progetto in modo ordinato, inclusi i passaggi per la consegna dei risultati, la chiusura dei conti e la gestione delle risorse residue.
+
+\begin{itemize}
+    \item \textbf{Acquisizione da parte di un'azienda consolidata nel settore energetico:} Tracker potrebbe essere acquisita da un'azienda che opera nel settore energetico, come un produttore di energia rinnovabile o un fornitore di servizi energetici. L'obiettivo di questa acquisizione potrebbe essere quello di espandere le offerte di servizi energetici integrati e sfruttare la piattaforma web-based di Tracker per migliorare la gestione e la vendita delle risorse energetiche.
+
+    \item \textbf{Partnership strategica con un'azienda complementare:} Tracker potrebbe stringere una partnership strategica con un'azienda che offre servizi o tecnologie complementari nel settore energetico. Questa partnership potrebbe consentire a Tracker di ampliare la propria base di clienti, accedere a nuove risorse e competenze, e offrire soluzioni energetiche più complete ai propri utenti.
+
+    \item \textbf{Offerta pubblica iniziale (IPO):} Un'altra opzione è una Initial Public Offering, quotandosi in borsa. Anche se complesso, questo dà agli investitori early stage la possibilità di monetizzare le loro quote e fornisce nuovo capitale per la crescita.
+
+\end{itemize}
+
+
+\chapter{Launching}
+\section{Recruiting Team}
+In accordo con la Jeff Bezos’ Two-Pizza Team Rule, si sceglie di dimensionare il team come segue:
+\begin{itemize}
+    \item Dallas - Project Manager: coincide con il CEO e inventore di TrackER, dotato di una certa esperienza pregressa nella gestione di team di lavoro e sui marketplace energetici.
+    \item John - Sviluppatore Senior Full-Stack - Scrum Master: Responsabile della gestione del progetto e del team. Fornisce indicazioni al team, orchestra il modo in cui vanno gestiti i processi (Riunire i ruoli di CEO e project manager in un'unica persona consente di concentrare le risorse economiche su altri ambiti ma si prende già in considerazione l'esigenza di assumere in futuro una figura che mantenga separate le due mansioni).    
+    \item Michael - Sviluppatore Mid-Level Full-Stack.
+    \item Bryant - Sviluppatore Mid-Level Front-End - UI/UX designer.
+    \item Gavin - Sviluppatore Junior Front-End.
+    \item Hailie - Direttore del Marketing .
+\end{itemize}
+Questo team multidisciplinare sarà responsabile dello sviluppo e del miglioramento continuo della piattaforma web TrackER. 
+\newline Ogni membro del team apporterà la propria esperienza e competenza nel rispettivo campo per garantire la realizzazione di un prodotto di alta qualità e coerente con le aspettative degli utenti.
+\newline Lavorando in sinergia, il team di sviluppo di TrackER si impegnerà a seguire le migliori pratiche di sviluppo software, adottando metodologie agili per favorire la collaborazione, la comunicazione e la flessibilità. \newline L'obiettivo del team di sviluppo sarà quello di costruire una piattaforma robusta, scalabile e user-friendly, che risponda alle esigenze dei clienti e fornisca un'esperienza di usabilità eccellente.
+
+\section{Regole Operative per il Team}
+Il team definisce regole operative con cui verranno portati avanti i processi di:
+\begin{itemize}
+    \item Problem solving
+    \item Decision making
+    \item Conflict resolution
+    \item Consensus building
+    \item Brainstorming
+\end{itemize}
+
+\subsection{Problem solving}
+\begin{itemize}
+    \item \textbf{Definire chiaramente il problema:}
+        Assicurarsi che tutti i membri del team comprendano appieno la natura e l'ambito del problema da risolvere.
+\item \textbf{Analisi delle cause:} Effettuare un'analisi delle cause profonda e sistematica per identificare le radici del problema.
+\item \textbf{Coinvolgimento di tutti i membri:} Coinvolgere tutti i membri del team nel processo di problem solving, incoraggiando idee e prospettive diverse.
+\item \textbf{Pensiero critico:} Promuovere un ambiente in cui il pensiero critico e l'esame obiettivo delle possibili soluzioni siano incoraggiati.
+\item \textbf{Valutazione delle soluzioni:} Valutare attentamente le soluzioni proposte, considerando i loro vantaggi, svantaggi e impatti potenziali.
+\item \textbf{Implementazione e monitoraggio:} Implementare la soluzione scelta e monitorare i risultati per assicurarsi che il problema sia risolto in modo efficace.
+\end{itemize}
+
+\subsection{Decision making}
+Viene adottato un processo consultivo che coinvolge attivamente tutti i membri del team, permettendo di sfruttare la diversità di punti di vista e competenze presenti all'interno dell'organizzazione. Pur mantenendo il CEO o il Project Manager come figura finale responsabile della decisione, riconosciamo l'importanza di raccogliere input e idee da tutti i partecipanti prima di giungere a una conclusione.
+
+Il processo decisionale si articola in diverse fasi:
+\begin{itemize}
+    \item \textbf{Discussione del tema:} Si affronta il tema oggetto di decisione in un ambiente aperto e collaborativo. Questa fase permette di identificare i punti di forza e le criticità della questione, nonché di raccogliere diverse prospettive e informazioni da parte dei membri del team.
+    \item \textbf{Formulazione di una proposta:} Una volta terminata la fase di discussione, il gruppo si impegna a formalizzare una proposta chiara e ben strutturata. Questa proposta costituisce il punto di partenza per il processo decisionale.
+    \item \textbf{Verifica del consenso:} Dopo aver presentato la proposta, ogni membro del team ha l'opportunità di esprimere il proprio accordo o disaccordo, incoraggiando un dialogo aperto e rispettoso, dove ciascun partecipante sia libero di esprimere la propria opinione.
+    \item \textbf{Identificazione delle obiezioni:} Se durante la verifica del consenso emergono delle obiezioni, queste vengono ascoltate attentamente e analizzate con serietà. Ogni dissenziente ha la possibilità di presentare le proprie argomentazioni e preoccupazioni.
+    \item \textbf{Modifica della proposta:} Nel caso in cui sorgano obiezioni, si attueranno pratiche per modificare la proposta originale. Questa fase implica un ulteriore confronto e, se necessario, la ricerca di soluzioni alternative che possano soddisfare le tutte le esigenze.
+    \item \textbf{Verifica finale:} Dopo le eventuali modifiche apportate alla proposta, si procede a una nuova verifica del consenso. L'obiettivo è raggiungere un accordo condiviso e un consenso maggioritario all'interno del team.
+    \item \textbf{Decisione finale:} Alla luce delle discussioni e delle considerazioni raccolte, il CEO o il Project Manager prende la decisione finale. La scelta è data da tutte le informazioni raccolte durante il processo e tiene conto delle opinioni di tutti i membri del team.
+\end{itemize}
+
+Questo approccio permette di trarre vantaggio dalla diversità di prospettive, promuovendo un clima di collaborazione e coinvolgimento e, allo stesso tempo, assicurando una leadership efficace nel processo decisionale.
+
+\subsection{Conflict resolution}
+Nel corso del progetto, è naturale che possano emergere conflitti. Tuttavia, sono state stabilite alcune regole fondamentali per garantire che le tensioni non sfocino in scontri tra le persone coinvolte:
+
+\begin{itemize}
+    \item \textbf{Trattare gli altri sempre con rispetto:} è essenziale rivolgersi a tutti, indipendentemente dal loro ruolo o competenze, con cortesia e rispetto. Evitiamo di giudicare le persone in base alla loro posizione o capacità percepite.
+    \item \textbf{Rispettare e considerare seriamente i punti di vista altrui:} anche quando non siamo d'accordo con qualcuno, dobbiamo dimostrare rispetto per le loro opinioni e considerarle con serietà.
+    \item \textbf{Esprimere il proprio disaccordo in modo costruttivo:} durante le discussioni, se non siamo d'accordo, è importante rimanere calmi e professionali, esponendo le nostre opinioni in modo chiaro e fornendo ragioni valide per il nostro punto di vista. Cerchiamo di proporre soluzioni per superare il disaccordo.
+    \item \textbf{Assicurarsi di essere tutti sulla stessa pagina:} se ci stiamo comunicando attraverso mezzi asincroni, dobbiamo essere sicuri di essere completamente allineati, per evitare incomprensioni dovute a mancati aggiornamenti delle informazioni.
+    \item \textbf{Prendersi una pausa prima di inviare un messaggio:} evitiamo di agire impulsivamente e di inviare messaggi dettati dall'emozione del momento. Diamo a noi stessi il tempo di ragionare e scrivere in modo lucido per evitare conflitti inutili.
+    \item \textbf{Essere disposti a scusarsi quando si commette un errore:} capiamo che un commento infelice durante una riunione, un'e-mail scritta di fretta o un messaggio improvviso possono ferire qualcuno. Per questo, dobbiamo essere pronti a scusarci e cercare di porre rimedio a situazioni spiacevoli.
+\end{itemize}
+
+\subsection{Consensus building}
+Questo approccio è finalizzato a creare un ambiente in cui le parti coinvolte collaborano e si impegnano attivamente per trovare una soluzione condivisa. Ciò contribuisce a evitare conflitti prolungati e a promuovere una gestione efficace delle controversie, portando a risultati più soddisfacenti e duraturi per tutte le parti interessate.
+
+Per garantire un processo efficace, vengono seguite alcune regole fondamentali:
+
+\begin{itemize}
+    \item \textbf{Coinvolgimento e comprensione:} Si assicura che tutte le parti interessate nell'accordo abbiano una solida comprensione della questione e del contesto della negoziazione. È importante includere tutte le persone rilevanti nel processo decisionale.
+    \item \textbf{Definizione dei ruoli e delle responsabilità:} Vengono negoziati e assegnati i ruoli specifici per affrontare i problemi e le dispute. Questo aiuta a stabilire chi è responsabile di cosa durante il processo di risoluzione.
+    \item \textbf{Risoluzione dei problemi come gruppo:} Si mira a sviluppare una proposta concordata dal gruppo prima di prendere impegni definitivi. Questo favorisce un approccio collaborativo in cui tutti hanno la possibilità di contribuire e discutere le soluzioni.
+    \item \textbf{Comunicazione e costruzione delle relazioni:} Mantenere una comunicazione efficace e costruire relazioni positive è essenziale. Un clima di fiducia e apertura facilita il raggiungimento di un accordo soddisfacente per tutte le parti coinvolte.
+    \item \textbf{Responsabilità nell'implementazione:} Durante l'implementazione dell'accordo, si presta particolare attenzione affinché tutti rispettino gli impegni presi. Questa fase può essere la più difficile, poiché possono emergere sorprese o difficoltà impreviste.
+\end{itemize}
+
+
+\subsection{Brainstorming}
+
+Esistono diverse tecniche di brainstorming ma per renderle veramente efficaci, bisogna seguire alcune regole di utilizzo.
+Successivamente sono elencate le linee guida utilizzate per condurre una sessione di brainstorming efficace:
+\begin{itemize}
+    \item \textbf{Obiettivo unico:} Durante una seduta di brainstorming, stabilite un obiettivo specifico da raggiungere. Questo aiuterà il team a concentrarsi su una singola direzione e ad ottenere risultati più significativi.
+
+ \item Coinvolgimento senza differenze gerarchiche: È importante coinvolgere tutto il team aziendale nel brainstorming e evitare grandi differenze gerarchiche. Tutte le persone devono sentirsi libere di esprimere le proprie idee senza timore di essere giudicate.
+
+ \item \textbf{Spirito propositivo e stop ai giudizi:} Partecipate allo brainstorming con uno spirito propositivo, proattivo e inclusivo. Evitate di giudicare o criticare le idee degli altri e, invece, focalizzatevi sulla generazione di nuove idee.
+
+ \item \textbf{Pianificazione degli incontri:} Organizzate incontri periodici ben definiti per il brainstorming. Stabilite una durata e un limite di tempo massimo per ogni sessione, in modo da rendere l'attività più efficiente.
+
+ \item \textbf{Creazione di un ambiente favorevole:} Scegliete un luogo luminoso e salutare per svolgere il brainstorming. Un ambiente positivo stimola la creatività e favorisce il buon umore, aumentando le possibilità di successo nel raggiungimento dell'obiettivo prefissato.
+
+ \item \textbf{Utilizzo di strumenti di supporto:} Utilizzate strumenti grafici o software di mappatura per organizzare e tenere traccia delle idee emerse durante il brainstorming. Questi strumenti aiutano a visualizzare e strutturare le informazioni in modo preciso e organizzato.
+
+ \item \textbf{Non interrompere il flusso delle idee:} Durante il brainstorming, è importante permettere che le idee fluiscano liberamente senza interruzioni. Promuovete un ambiente in cui tutti possono esprimere le proprie idee senza essere interrotti o giudicati prematuramente.
+
+ \item \textbf{Eliminare le distrazioni digitali:} Al momento del brainstorming, evitate di utilizzare dispositivi elettronici che potrebbero distrarre l'attenzione. Spegnere i cellulari o metterli in modalità silenziosa aiuta a mantenere la concentrazione sulle attività di brainstorming.
+
+   
+\end{itemize}
+
+\section{Gestione dei cambiamenti dello scope}
+
+TrackER è una startup innovativa che offre un nuovo servizio nel campo della gestione e vendita di risorse energetiche. Nonostante i requisiti fondamentali del servizio siano chiari e stabili, il team di sviluppo si impegna sin da subito a essere flessibile e aperto a feedback e suggerimenti da parte dei clienti. Fin dal primo rilascio del servizio, il team sarà disponibile per assistere il cliente, raccogliere feedback e suggerimenti e apportare continuamente miglioramenti al prodotto.
+
+Il team di TrackER pianifica rollout continui ogni 2-3 settimane per garantire uno sviluppo tecnologico costante e rimanere in sintonia con le esigenze dei propri clienti. Questa strategia si basa su un continuo raffinamento della Work Breakdown Structure (WBS) ad ogni iterazione, consentendo di stabilire una definizione solida e di decidere su quali caratteristiche focalizzarsi in ogni rilascio e quali attività prioritizzare.
+
+Dopo il completamento della versione 1.0 del prodotto, il team di TrackER pianifica incontri di revisione del progetto prima di ogni aggiornamento, in cui vengono presentate le performance raggiunte fino a quel momento. 
+
+Durante queste riunioni, che coinvolgono il CEO/Project Manager, gli stakeholder e il core team, viene condotta una revisione critica del progetto e vengono avanzate proposte per miglioramenti futuri.
+
+Attraverso un approccio di revisione continua e un'attenzione costante alle esigenze dei clienti, il team di TrackER si impegna a offrire un servizio di qualità superiore e a garantire il successo del progetto.
+
+\chapter{Monitoring}
+\section{Sistema di reporting in adozione}
+Il progetto TrackER si basa su un sistema di monitoraggio delle attività settimanali e mensili, con l'obiettivo di valutare le prestazioni e individuare eventuali deviazioni dalla pianificazione. Prima della chiusura settimanale, vengono forniti aggiornamenti sullo stato del progetto, mentre i resoconti mensili offrono una visione più completa delle attività svolte fino a quel momento.
+
+Per garantire una valutazione accurata delle prestazioni attraverso l'analisi del valore guadagnato (Earned Value Analysis), vengono registrate per ciascuna attività le date di inizio e fine, le percentuali di completamento e le risorse impiegate. Questo approccio è ampiamente riconosciuto come una best practice per monitorare l'aderenza alla pianificazione e al budget previsto.
+
+Parallelamente, il team mantiene due registri pubblici noti come "Issues Log", uno per l'ambito tecnico e ingegneristico e l'altro per aspetti non tecnici, come marketing e sviluppo. Questi registri tracciano tutte le problematiche che emergono durante lo svolgimento delle attività. Ogni problema viene etichettato e documentato cronologicamente, fornendo una descrizione dettagliata del suo impatto sui clienti e sull'azienda. Inoltre, viene inclusa una strategia mirata per evitare situazioni simili in futuro.
+
+L'obiettivo principale di queste pratiche è imparare dagli errori e dalle problematiche passate, creando una cultura aziendale che promuova la fiducia reciproca tra i membri del team e li renda più responsabili nel raggiungimento degli obiettivi del progetto.
+
+\section{Gestione dei project status meetings}
+La gestione dei meeting del progetto si basa su un approccio incentrato sulla discussione costante dello stato dei lavori. Un elemento chiave è rappresentato dalle "Daily Status Meeting", brevi riunioni quotidiane della durata di 15 minuti, che permettono di fare il punto sulla situazione in modo informale ma costante.
+
+Tuttavia, per affrontare eventuali difficoltà o problemi che potrebbero emergere durante il progetto, sono previsti meeting specifici che richiedono più tempo e una struttura più organizzata. Uno di questi è il "Problem Management Meeting", un momento delicato che si svolge sotto pressione per trovare rapidamente soluzioni agli eventi imprevisti che ostacolano il normale avanzamento del progetto.
+
+Questi meeting in particolare seguono un'agenda ben definita:
+
+\begin{itemize}
+    \item \textbf{Definizione chiara del problema o dell'obiettivo:} Il responsabile della riunione formalizza il problema e i contributi ad esso relativi. Durante questa fase, vengono poste domande e richiesti chiarimenti per avere una visione completa della situazione.
+
+    \item \textbf{Identificazione e assegnazione delle priorità per i requisiti e i vincoli delle potenziali soluzioni:} Si valutano tutti i parametri che la soluzione deve soddisfare, come tempo, budget e risorse disponibili.
+
+    \item \textbf{Esplorazione delle possibili soluzioni:} Si concede il tempo necessario ai partecipanti per valutare diverse opzioni. Si utilizzano i principi operativi e le procedure definite dal team per svolgere sessioni di brainstorming.
+
+    \item \textbf{Accordarsi su una soluzione o dare all'interessato la parola finale:} Se diverse opzioni sembrano essere praticabili, si considerano quelle più realistiche e che risolvano il problema nel lungo termine.
+\end{itemize}
+
+Questo approccio strutturato permette al team di affrontare in modo efficace i problemi durante il progetto, garantendo una discussione approfondita e una risoluzione tempestiva per mantenere il progetto in corso. Il coinvolgimento dell'intero team è cruciale, specialmente quando il problema coinvolge diverse aree di TrackER. L'obiettivo è superare gli ostacoli in modo efficiente e mantenere il progetto sulla giusta direzione.
+
+\chapter{Closing}
+Durante la fase di chiusura del progetto TrackER, verranno eseguite una serie di attività per completare in modo accurato e sistematico il progetto. Queste attività includono l'installazione dei deliverable, la documentazione del progetto, l'audit post-implementazione e la compilazione del rapporto finale del progetto.
+
+\section{Go Live}
+Il processo Go Live per il progetto è un'importante fase di lancio, durante la quale la web app viene resa ufficialmente accessibile agli utenti e al pubblico. Questa fase richiede una pianificazione e un'attenta esecuzione per garantire che il progettp funzioni correttamente e offra un'esperienza utente ottimale. Di seguito, sono elencati i passaggi coinvolti nel processo di lancio:
+
+
+\begin{enumerate}
+    \item \textbf{Testing Finale e Controllo di Qualità:}
+    \begin{itemize}
+        \item Effettuare test approfonditi per verificare che tutte le funzionalità funzionino correttamente
+        \item Verificare la compatibilità del progetto con diversi browser (come Chrome, Firefox, Safari, Edge, ecc.) e dispositivi (desktop, tablet, smartphone).
+    \end{itemize}
+    
+    \item \textbf{Preparazione dell'Ambiente di Produzione:}
+    \begin{itemize}
+        \item Configurare l'ambiente di hosting o il server in cui la web app sarà messa in produzione.
+        \item Configurare eventuali certificati SSL per garantire una connessione sicura attraverso HTTPS.
+    \end{itemize}
+    
+    \item \textbf{Deployment:}
+    \begin{itemize}
+        \item Caricare tutti i file e le risorse del sito web nell'ambiente di produzione.
+        \item Verificare che i collegamenti ai database siano corretti e funzionanti.
+        \item Assicurarsi che il dominio corretto sia associato al sito web.
+    \end{itemize}
+    
+    \item \textbf{Monitoraggio Iniziale:}
+    \begin{itemize}
+        \item Implementare strumenti di monitoraggio (come Google Analytics) per tracciare il comportamento degli utenti e raccogliere dati di utilizzo.
+         \item Effettuare test di carico simulando un numero significativo di utenti per valutare la stabilità e le prestazioni del sito web in un ambiente di produzione.
+           \item Effettuare un backup completo del sito web in produzione per garantire la possibilità di ripristinare in caso di problemi improvvisi.
+    \end{itemize}
+    
+    \item \textbf{Supporto Post-Lancio e Aggiornamenti:}
+    \begin{itemize}
+        \item Monitorare il sito web dopo il lancio per identificare tempestivamente eventuali problemi o anomalie e risolverli rapidamente.
+        \item Fornire assistenza agli utenti in caso di domande o problemi.
+          \item Pianificare aggiornamenti futuri in base al feedback degli utenti e alle esigenze aziendali.
+    \end{itemize}
+\end{enumerate}
+
+
+Questa fase è critica per il successo complessivo del progetto, poiché rappresenta il passaggio finale per consegnare il valore dell'applicazione ai suoi utilizzatori. Una corretta esecuzione di questa fase può influenzare positivamente la percezione del progetto e l'adozione da parte degli utenti.
+
+\section{Documentazione del progetto}
+In allegato è possibile consultare la documentazione di progetto di TrackER. Se ne consiglia la consultazione per ottenere informazioni dettagliate sul progetto.
+\end{document}
